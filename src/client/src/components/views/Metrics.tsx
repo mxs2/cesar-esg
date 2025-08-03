@@ -35,23 +35,23 @@ export const Metrics: React.FC = () => {
     }
   };
 
-  const handleEditMetric = async (updatedMetric: ESGMetric) => {
-    try {
-      const response = await apiService.updateMetric(
-        updatedMetric.id!,
-        updatedMetric,
-      );
+  // const handleEditMetric = async (updatedMetric: ESGMetric) => {
+  //   try {
+  //     const response = await apiService.updateMetric(
+  //       updatedMetric.id!,
+  //       updatedMetric,
+  //     );
 
-      if (response.success && response.data) {
-        setMetrics((prev) =>
-          prev.map((m) => (m.id === updatedMetric.id ? response.data! : m)),
-        );
-      }
-    } catch (error) {
-      console.error("Failed to update metric:", error);
-      throw error;
-    }
-  };
+  //     if (response.success && response.data) {
+  //       setMetrics((prev) =>
+  //         prev.map((m) => (m.id === updatedMetric.id ? response.data! : m)),
+  //       );
+  //     }
+  //   } catch (error) {
+  //     console.error("Failed to update metric:", error);
+  //     throw error;
+  //   }
+  // };
 
   const handleDeleteMetric = async (id: string) => {
     if (!confirm("Tem certeza que deseja excluir esta métrica?")) {
