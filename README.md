@@ -1,5 +1,7 @@
 # ESG Data Management Application
 
+[![Translate to PT-BR](https://img.shields.io/badge/Traduzir%20para%20PT--BR-blue?style=for-the-badge)](README-pt.md)
+
 A modern, minimalist ESG (Environmental, Social, Governance) data management web application built with TypeScript, React, and Material Design principles.
 
 ## 🚀 Features
