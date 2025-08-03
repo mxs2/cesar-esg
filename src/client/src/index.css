@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-gray-50 font-sans text-gray-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-size: 14px;
+  }
+
+  @screen lg {
+    body {
+      font-size: 16px;
+    }
+  }
+}
+
+@layer components {
+  /* Material Design inspired button */
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 lg:py-2 lg:px-4 rounded-lg shadow-material transition-all duration-200 ease-in-out hover:shadow-material-lg touch-manipulation;
+    min-height: 44px; /* iOS touch target size */
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-4 lg:py-2 lg:px-4 rounded-lg border border-gray-300 shadow-material transition-all duration-200 ease-in-out hover:shadow-material-lg touch-manipulation;
+    min-height: 44px;
+  }
+
+  .btn-success {
+    @apply bg-success-600 hover:bg-success-700 text-white font-medium py-3 px-4 lg:py-2 lg:px-4 rounded-lg shadow-material transition-all duration-200 ease-in-out hover:shadow-material-lg touch-manipulation;
+    min-height: 44px;
+  }
+
+  .btn-warning {
+    @apply bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-4 lg:py-2 lg:px-4 rounded-lg shadow-material transition-all duration-200 ease-in-out hover:shadow-material-lg touch-manipulation;
+    min-height: 44px;
+  }
+
+  /* Material Design inspired cards */
+  .card {
+    @apply bg-white rounded-xl shadow-material p-6 border border-gray-100;
+  }
+
+  .card-header {
+    @apply border-b border-gray-100 pb-4 mb-4;
+  }
+
+  /* Material Design inspired form inputs */
+  .input-field {
+    @apply w-full px-4 py-4 lg:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-base;
+    min-height: 44px; /* iOS touch target size */
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  /* Navigation styles */
+  .nav-item {
+    @apply flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-600 rounded-lg transition-colors duration-200;
+  }
+
+  .nav-item.active {
+    @apply bg-primary-50 text-primary-600 border-r-2 border-primary-600;
+  }
+
+  /* Chart container */
+  .chart-container {
+    @apply bg-white rounded-xl shadow-material p-6 border border-gray-100 h-96;
+  }
+
+  /* Loading states */
+  .loading-spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600;
+  }
+
+  /* Status badges */
+  .badge-verified {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success-100 text-success-800;
+  }
+
+  .badge-pending {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800;
+  }
+
+  .badge-environmental {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800;
+  }
+
+  .badge-social {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+  }
+
+  .badge-governance {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800;
+  }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Layout improvements */
+.layout-main {
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+}
+
+/* Ensure footer stays at bottom */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
